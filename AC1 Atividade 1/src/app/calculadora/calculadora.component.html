@@ -1,0 +1,27 @@
+<div style="max-width: 600px; margin: auto; font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="font-size: 1.2em; margin-bottom: 10px;">Digite dois números e escolha a operação que deseja realizar:</div>
+        <div style="font-size: 1.1em; color: #333;"></div>
+
+        <div style="margin-top: 20px;">
+            <label for="numero1" style="display: block; margin-bottom: 5px;">Primeiro número</label>
+            <input id="numero1" type="number" [(ngModel)]="numero1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+
+        <div style="margin-top: 10px;">
+            <label for="numero2" style="display: block; margin-bottom: 5px;">Segundo número</label>
+            <input id="numero2" type="number" [(ngModel)]="numero2" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <div style="display: flex; justify-content: center; gap: 10px;">
+                <button (click)="definirOperacao('+')" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Somar</button>
+                <button (click)="definirOperacao('-')" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Subtrair</button>
+                <button (click)="definirOperacao('*')" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Multiplicar</button>
+                <button (click)="definirOperacao('/')" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Dividir</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <p style="font-size: 1.2em;">O resultado é: <strong>{{ resultado.toFixed(2) }}</strong></p>
+        </div>
+</div>

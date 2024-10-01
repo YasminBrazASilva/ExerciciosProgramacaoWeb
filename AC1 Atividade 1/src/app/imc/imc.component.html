@@ -1,0 +1,26 @@
+<div style="max-width: 600px; margin: auto; font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="font-size: 1.2em; margin-bottom: 10px;">Calcula o seu IMC (Índice de Massa Corporal), usando o seguinte cálculo:</div>
+    <div style="font-size: 1.1em; color: #333;">
+        <strong>Peso (em kg) / (Altura (em m)<sup>2</sup>) </strong>
+    </div>
+
+    
+    <div style="margin-top: 20px;">
+        <label for="peso" style="display: block; margin-bottom: 5px;">Peso (em kg)</label>
+        <input id="peso" type="number" [(ngModel)]="peso" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">    
+    </div>
+
+    <div style="margin-top: 20px;">
+        <label for="altura" style="display: block; margin-bottom: 5px;">Altura (em m)</label>
+        <input id="altura" type="number" [(ngModel)]="altura" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">    
+    </div>
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <button (click)="calcularImc()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Calcular</button>
+    </div>
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <p style="font-size: 1.2em;">Seu IMC é: <strong>{{ imc.toFixed(2) }}</strong></p>
+        <p style="font-size: 1.2em;">Classificação desse resultado: <strong>{{ classificacao }}</strong></p>
+    </div>
+</div>

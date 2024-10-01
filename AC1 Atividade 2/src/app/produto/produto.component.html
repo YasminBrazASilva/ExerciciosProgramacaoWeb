@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-12">
+        <div *ngIf="produtosDisponiveis">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Descrição</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let produto of listaProdutos">
+                        <td>{{ produto.nome }}</td>
+                        <td> R$ {{ produto.preco }}</td>
+                        <td>{{ produto.descricao }}</td>
+                        <td>
+                            <button class="btn btn-primary"
+                                [ngStyle]="{'background-color': produto.disponivel ? 'green' : 'gray'}"
+                                title="{{ produto.disponivel ? '' : 'Produto indisponível' }}">
+                                Comprar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alert alert-warning" *ngIf="!produtosDisponiveis">
+                Nenhum produto disponível.
+        </div>
+    </div>
+</div>

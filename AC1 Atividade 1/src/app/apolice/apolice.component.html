@@ -1,0 +1,35 @@
+<div style="max-width: 600px; margin: auto; font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="font-size: 1.2em; margin-bottom: 10px;">Calcula a apólice do seu seguro automobilistico</div>
+
+    
+    <div style="margin-top: 20px;">
+        <label for="nome" style="display: block; margin-bottom: 5px;">Nome</label>
+        <input id="nome" type="string" [(ngModel)]="nome" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">    
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <label for="sexo" style="display: block; margin-bottom: 5px;">Sexo</label>
+        <select id="sexo" [(ngModel)]="sexo" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </select>
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <label for="idade" style="display: block; margin-bottom: 5px;">Idade</label>
+        <input id="idade" type="number" [(ngModel)]="idade" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <label for="valorAutomovel" style="display: block; margin-bottom: 5px;">Valor automóvel</label>
+        <input id="valorAutomovel" type="number" [(ngModel)]="valorAutomovel" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <button (click)="calcularApolice()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Calcular</button>
+    </div>
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <p style="font-size: 1.2em;">O valor da apólice é: <strong> R$ {{ valorFinal.toFixed(2) }}</strong></p>
+    </div>
+</div>
